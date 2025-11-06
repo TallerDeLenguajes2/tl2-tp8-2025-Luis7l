@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alumno\\Downloads\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj": {}
+    "C:\\Users\\luisl\\OneDrive\\Documentos\\Facultad\\Taller\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alumno\\Downloads\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj": {
+    "C:\\Users\\luisl\\OneDrive\\Documentos\\Facultad\\Taller\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alumno\\Downloads\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj",
+        "projectUniqueName": "C:\\Users\\luisl\\OneDrive\\Documentos\\Facultad\\Taller\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj",
         "projectName": "tl2-tp8-2025-Luis7l",
-        "projectPath": "C:\\Users\\Alumno\\Downloads\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj",
-        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alumno\\Downloads\\tl2-tp8-2025-Luis7l\\obj\\",
+        "projectPath": "C:\\Users\\luisl\\OneDrive\\Documentos\\Facultad\\Taller\\tl2-tp8-2025-Luis7l\\tl2-tp8-2025-Luis7l.csproj",
+        "packagesPath": "C:\\Users\\luisl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luisl\\OneDrive\\Documentos\\Facultad\\Taller\\tl2-tp8-2025-Luis7l\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\luisl\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

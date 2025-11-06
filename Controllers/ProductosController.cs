@@ -1,14 +1,28 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using tl2_tp8_2025_Luis7l.Models;
-
+using Models;
+using Persistence;
 namespace tl2_tp8_2025_Luis7l.Controllers;
-public class ProductosController : Controller
+
+public class ProductoController : Controller
 {
-    private ProductoRepository productoRepository;
-    public ProductosController()
+    private readonly ILogger<ProductoController> _logger;
+
+    // 1. Cambia el tipo de IRepository<> a la clase concreta ProductoRepository
+    private readonly ProductoRepository repositorioProductos;
+
+    public ProductoController(ILogger<ProductoController> logger)
     {
-        productoRepository = new ProductoRepository();
+        _logger = logger;
+
+
+        repositorioProductos = new ProductoRepository();
     }
-    //A partir de aquí van todos los Action Methods (Get, Post,etc.)
+
+    [HttpGet]
+    public IActionResult Listar()
+    {
+        // 3. Llama al método correcto: ListarProductos()
+        return View(repositorioProductos.ListarProductos());
+    }
 }
