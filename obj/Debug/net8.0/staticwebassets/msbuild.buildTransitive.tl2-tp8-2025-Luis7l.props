@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\tl2-tp8-2025-Luis7l.props" />
-</Project>

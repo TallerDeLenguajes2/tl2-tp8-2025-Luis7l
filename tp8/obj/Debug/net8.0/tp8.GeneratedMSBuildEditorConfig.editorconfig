@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = tp8
+build_property.RootNamespace = tp8
+build_property.ProjectDir = C:\Users\luisl\OneDrive\Documentos\Facultad\Taller\tl2-tp8-2025-Luis7l\tp8\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\luisl\OneDrive\Documentos\Facultad\Taller\tl2-tp8-2025-Luis7l\tp8
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/presupuesto/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJlc3VwdWVzdG9cY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/presupuesto/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJlc3VwdWVzdG9cZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/presupuesto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJlc3VwdWVzdG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/presupuesto/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJlc3VwdWVzdG9cZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/presupuesto/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJlc3VwdWVzdG9caW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/producto/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdG9cY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/producto/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdG9cZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/producto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/producto/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdG9cZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/producto/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdG9caW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luisl/OneDrive/Documentos/Facultad/Taller/tl2-tp8-2025-Luis7l/tp8/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-20yh20wnxz

@@ -1,0 +1,28 @@
+@using Models;
+@model Producto
+@{
+    ViewData["Title"]="Listado de productos";
+}
+
+<h1 class="text-danger text-center ">  Dar de alta producto</h1>
+
+<section class="container">
+    <form asp-controller="Producto" aps-action="Create" method="post" >
+        <section class="form-group mb-3">
+            <label for="Descripcion">Descripcion</label>
+            <input asp-for="Descripcion" class="form-control" required>
+         </section>
+         <section class="form-group mb-3">
+            <label for="Precio">Precio</label>
+            <input asp-for="Precio" class="form-control" required />         
+         </section>
+        <section class="d-flex justify-content-center">
+            <input type="submit" value="Dar de alta" class="btn btn-primary"/>
+            <input type="reset" value="Borrar formumlario" class="btn btn-outline-secondary">
+        
+        </section>
+    </form>
+
+
+</section>
+

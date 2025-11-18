@@ -1,0 +1,46 @@
+@using Models
+@model IEnumerable<Models.Presupuesto>
+
+@{
+    ViewData["Title"] = "Listado de Presupuestos";
+}
+
+<h1 class="text-danger text-center ">Estos son los presupuestos brotheeeeeeeeeeeer</h1>
+
+<section class="text-center" style="margin-bottom: 20px;">
+    <a class="btn-center btn btn-outline-primary" asp-action="create">Agrega algo (si queres)</a>
+</section>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th>ID Presupuesto</th>
+            <th>Destinatario</th>
+            <th>Nro. de Ítems</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var presupuesto in Model)
+        {
+            <tr>
+                <td>@presupuesto.IdPresupuesto</td>
+                <td>@presupuesto.NombreDestinatario</td>
+                
+            
+                <td>@presupuesto.Detalle.Count</td>
+                
+                <td>
+
+                    <a class="btn btn-outline-info" asp-action="details" asp-route-id="@presupuesto.IdPresupuesto">Ver</a>
+
+                    <a class="btn btn-outline-primary" asp-action="edit" asp-route-id="@presupuesto.IdPresupuesto">EDITAME PA</a>
+                    <a class="btn btn-outline-danger" asp-action="delete" asp-route-id="@presupuesto.IdPresupuesto">BORRAME PA</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@* 4. CORREGIDO: Se eliminó el "}" extra que estaba aquí *@

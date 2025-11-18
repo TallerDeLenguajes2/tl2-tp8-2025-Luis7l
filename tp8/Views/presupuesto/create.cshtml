@@ -1,0 +1,26 @@
+@using Models;
+@model Presupuesto
+@{
+    ViewData["title"]="Crear presupuesto";
+}
+
+<h1 class="text-center"> Dar de alta presupuesto</h1>
+
+<section class="container">
+
+    <form asp-controller="presupuesto" asp-action="Create" method="post">
+            <section class="form-group mb-3">
+            <label for="NombreDestinatario">Nombre destinatario</label>
+            <input asp-for="NombreDestinatario" class="form-control" required >
+            </section>
+            <section class="form-group mb-3">
+            <label for="FechaCreacion">Fecha del presupuesto</label>
+            <input asp-for="FechaCreacion" class="form-control" required>
+            </section>
+            <section class="d-flex justify-content-center">
+            <input type="submit" value="Dar de alta" class="btn btn-primary">
+            <input type="reset" value="Borrar Formulario" class="btn btn-outline-secondary">
+            </section>
+    </form>
+
+</section>

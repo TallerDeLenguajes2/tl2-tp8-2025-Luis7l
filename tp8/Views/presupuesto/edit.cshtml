@@ -1,0 +1,27 @@
+@using Models;
+@model Presupuesto
+
+@{
+    ViewData["title"]="editar presupuesto";
+}
+<h1 class ="text-center bg-primary"> Editar presupuesto</h1>
+
+<section>
+    <form  asp-action="Edit" method="post">
+        <section asp-validation-summary="ModelOnly" class="text-danger"></section>
+        <input type="hidden" asp-for="IdPresupuesto" >
+        <section class="mb-3">
+        <label asp-for="NombreDestinatario" class="form-label"></label>
+        <input asp-for="NombreDestinatario" class="form-control"></>
+        </section>
+        <section class="mb-3">
+        <label asp-for="FechaCreacion" class="form-label"></label>
+        <input asp-for="FechaCreacion" class="form-control"></>
+        </section>
+        <section class="form-group"> 
+            <input type="submit" value ="guardar cambios" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </section>
+    </form>
+
+</section>

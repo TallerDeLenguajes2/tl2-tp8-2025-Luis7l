@@ -1,0 +1,55 @@
+@using Models
+@model Models.Presupuesto
+
+@{
+    ViewData["Title"] = "Detalle presupuesto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<section>
+    <h4>Presupuesto Nro: @Model.IdPresupuesto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Nombre:</dt>
+        <dd class="col-sm-9">@Model.NombreDestinatario</dd>
+
+        <dt class="col-sm-3">Fecha creación:</dt>
+        <dd class="col-sm-9">@Model.FechaCreacion</dd>
+    </dl>
+</section>
+
+<hr />
+
+<h4>Productos Incluidos</h4>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* Recorremos la lista "Model.Detalle" que SÍ existe en tu
+          modelo Presupuesto.cs
+        *@
+        @foreach (var detalle in Model.Detalle)
+        {
+            <tr>
+                @* Accedemos a las propiedades de PresupuestoDetalle.cs
+                 
+                *@
+                <td>@detalle.Producto.Descripcion</td>
+                <td>@detalle.Cantidad</td>
+                <td>$@detalle.Producto.Precio</td>
+                <td>$@(detalle.Cantidad * detalle.Producto.Precio)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<a asp-action="Index" class="btn btn-secondary">Volver al Listado</a>
