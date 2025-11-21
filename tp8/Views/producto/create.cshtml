@@ -1,5 +1,5 @@
 @using Models;
-@model Producto
+@model ViewModels.ProductoViewModel;
 @{
     ViewData["Title"]="Listado de productos";
 }
@@ -11,10 +11,12 @@
         <section class="form-group mb-3">
             <label for="Descripcion">Descripcion</label>
             <input asp-for="Descripcion" class="form-control" required>
+            <span asp-validation-for="Descripcion" class="text-danger"></span>
          </section>
          <section class="form-group mb-3">
             <label for="Precio">Precio</label>
             <input asp-for="Precio" class="form-control" required />         
+            <span asp-validation-for="Precio" class="text-danger"></span>
          </section>
         <section class="d-flex justify-content-center">
             <input type="submit" value="Dar de alta" class="btn btn-primary"/>
@@ -22,7 +24,9 @@
         
         </section>
     </form>
-
-
 </section>
+
+@section Scripts{
+    <partial bane="_ValidationScriptsPartia"/>;
+}
 

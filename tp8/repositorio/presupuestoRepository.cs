@@ -69,53 +69,35 @@ public class PresupuestoRepository
         return new List<Presupuesto>(presupuestos.Values);
     }
 
-        public bool Eliminar(int id)
+    public bool Eliminar(int id)
+    {
+
+        using var connection = new SqliteConnection(connectionString);
+        connection.Open();
+        using var transaction = connection.BeginTransaction();
+
+        try
         {
-            using var connection = new SqliteConnection(connectionString);
-            connection.Open();
+            var sqlQueryDetalle = @"DELETE FROM PresupuestosDetalle WHERE idPresupuesto=@id";
+            using var commandDetalle = new SqliteCommand(sqlQueryDetalle, connection,transaction);
+            commandDetalle.Parameters.AddWithValue("@id", id);
+            commandDetalle.ExecuteNonQuery();
 
             string queryString = "DELETE FROM Presupuestos WHERE idPresupuesto = @id";
-            using var command = new SqliteCommand(queryString, connection);
-
+            using var command = new SqliteCommand(queryString, connection,transaction);
             command.Parameters.AddWithValue("@id", id);
-
-            return command.ExecuteNonQuery() == 1;
+            int rowsAffected = command.ExecuteNonQuery();
+            transaction.Commit();
+            return rowsAffected == 1;
         }
-    
-/*public bool Eliminar(int id)
-{
-    using var connection = new SqliteConnection(connectionString);
-    connection.Open();
-    
-    // Iniciar una transacción
-    using var transaction = connection.BeginTransaction();
+        catch(Exception)
+        {
+            transaction.Rollback();
+            return false;
+        }
+        }
 
-    try
-    {
-        // 1. Eliminar los detalles (hijos) PRIMERO
-        var sqlQueryDetalle = @"DELETE FROM PresupuestosDetalle WHERE idPresupuesto=$id";
-        using var sqlCmdDetalle = new SqliteCommand(sqlQueryDetalle, connection, transaction);
-        sqlCmdDetalle.Parameters.AddWithValue("$id", id); // <-- Parámetro correcto
-        sqlCmdDetalle.ExecuteNonQuery();
 
-        // 2. Eliminar el presupuesto (padre) DESPUÉS
-        var sqlQuery = @"DELETE FROM Presupuestos WHERE idPresupuesto=$id";
-        using var sqlCmd = new SqliteCommand(sqlQuery, connection, transaction);
-        sqlCmd.Parameters.AddWithValue("$id", id); // <-- Parámetro correcto
-        int rowsAffected = sqlCmd.ExecuteNonQuery();
-
-        // 3. Confirmar cambios
-        transaction.Commit();
-        
-        return rowsAffected == 1;
-    }
-    catch (Exception)
-    {
-        // 4. Revertir si algo falla
-        transaction.Rollback();
-        return false;
-    }
-}*/
     public bool Modificar(int id, Presupuesto obj)
     {
         using var connection = new SqliteConnection(connectionString);
@@ -209,7 +191,7 @@ public class PresupuestoRepository
         {
             return new Presupuesto(reader.GetInt32(0),
                                    reader.GetString(1),
-                                   reader.GetString(2));
+                                   reader.GetDateTime(2));
         }
         catch (Exception)
         {

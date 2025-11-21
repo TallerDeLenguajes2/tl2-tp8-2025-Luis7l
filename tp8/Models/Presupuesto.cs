@@ -5,18 +5,18 @@ public class Presupuesto
     private int idPresupuesto;
     private string nombreDestinatario;
 
-    private string fecha_creacion;
+    private DateTime fecha_creacion;
 
     List<PresupuestoDetalle> detalle;
 
     public Presupuesto()
     {
         nombreDestinatario = string.Empty;
-        fecha_creacion = string.Empty;
+        fecha_creacion = DateTime.Today;
         idPresupuesto = -1;
         detalle = new List<PresupuestoDetalle>();
     }
-    public Presupuesto(string nombre, string fechacreacion)
+    public Presupuesto(string nombre, DateTime fechacreacion)
     {
         idPresupuesto = -1;
         detalle = new List<PresupuestoDetalle>();
@@ -24,7 +24,7 @@ public class Presupuesto
         this.nombreDestinatario = nombre;
 
     }
-    public Presupuesto(int id, string nombre, string fechacreacion)
+    public Presupuesto(int id, string nombre, DateTime fechacreacion)
     {
         this.idPresupuesto = id;
         this.nombreDestinatario = nombre;
@@ -33,7 +33,7 @@ public class Presupuesto
     }
     public int IdPresupuesto { get => idPresupuesto; set => idPresupuesto = value; }
     public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
-    public string FechaCreacion { get => fecha_creacion; set => fecha_creacion = value; }
+    public DateTime FechaCreacion { get => fecha_creacion; set => fecha_creacion = value; }
     public List<PresupuestoDetalle>Detalle{ get => detalle; set => detalle = value; }
     float MontoPresupuesto()
     {

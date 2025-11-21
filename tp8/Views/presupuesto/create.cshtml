@@ -1,5 +1,4 @@
-@using Models;
-@model Presupuesto
+@model ViewModels.PresupuestoViewModel
 @{
     ViewData["title"]="Crear presupuesto";
 }
@@ -12,10 +11,12 @@
             <section class="form-group mb-3">
             <label for="NombreDestinatario">Nombre destinatario</label>
             <input asp-for="NombreDestinatario" class="form-control" required >
+            <span asp-validation-for="NombreDestinatario" class="text-danger"></span>
             </section>
             <section class="form-group mb-3">
             <label for="FechaCreacion">Fecha del presupuesto</label>
             <input asp-for="FechaCreacion" class="form-control" required>
+            <span asp-validation-for="FechaCreacion" class="text-danger"></span>
             </section>
             <section class="d-flex justify-content-center">
             <input type="submit" value="Dar de alta" class="btn btn-primary">
@@ -24,3 +25,6 @@
     </form>
 
 </section>
+@section Scripts{
+    <partial bane="_ValidationScriptsPartia"/>;
+}

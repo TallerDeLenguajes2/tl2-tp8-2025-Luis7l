@@ -1,5 +1,5 @@
 @using Models;
-@model Presupuesto
+@model ViewModels.PresupuestoViewModel
 
 @{
     ViewData["title"]="editar presupuesto";
@@ -9,14 +9,18 @@
 <section>
     <form  asp-action="Edit" method="post">
         <section asp-validation-summary="ModelOnly" class="text-danger"></section>
-        <input type="hidden" asp-for="IdPresupuesto" >
+        <input type="hidden" asp-for="Id_presupuesto" >
         <section class="mb-3">
         <label asp-for="NombreDestinatario" class="form-label"></label>
         <input asp-for="NombreDestinatario" class="form-control"></>
+        <span asp-validation-for="NombreDestinatario" class="text-danger"></span>
+
         </section>
         <section class="mb-3">
         <label asp-for="FechaCreacion" class="form-label"></label>
         <input asp-for="FechaCreacion" class="form-control"></>
+        <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+
         </section>
         <section class="form-group"> 
             <input type="submit" value ="guardar cambios" class="btn btn-primary" />

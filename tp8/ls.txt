@@ -1,0 +1,34 @@
+public bool Eliminar(int id)
+{
+    using var connection = new SqliteConnection(connectionString);
+    connection.Open();
+
+    // Usamos una transacción para asegurar que se borre todo o nada
+    using var transaction = connection.BeginTransaction();
+
+    try
+    {
+        // 1. PRIMERO: Eliminar los detalles (los productos dentro del presupuesto)
+        var sqlQueryDetalle = @"DELETE FROM PresupuestosDetalle WHERE idPresupuesto = @id";
+        using var commandDetalle = new SqliteCommand(sqlQueryDetalle, connection, transaction);
+        commandDetalle.Parameters.AddWithValue("@id", id);
+        commandDetalle.ExecuteNonQuery();
+
+        // 2. SEGUNDO: Eliminar el presupuesto (la cabecera)
+        var sqlQueryPresupuesto = @"DELETE FROM Presupuestos WHERE idPresupuesto = @id";
+        using var commandPresupuesto = new SqliteCommand(sqlQueryPresupuesto, connection, transaction);
+        commandPresupuesto.Parameters.AddWithValue("@id", id);
+        int rowsAffected = commandPresupuesto.ExecuteNonQuery();
+
+        // 3. Confirmar cambios
+        transaction.Commit();
+
+        return rowsAffected == 1;
+    }
+    catch (Exception)
+    {
+        // Si algo falla, deshacemos todo
+        transaction.Rollback();
+        return false;
+    }
+}
